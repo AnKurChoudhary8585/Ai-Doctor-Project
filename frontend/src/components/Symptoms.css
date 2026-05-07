@@ -1,0 +1,113 @@
+.symptoms-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.symptoms-container h2 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.symptom-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(157, 0, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.symptom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(157, 0, 255, 0.1);
+  border-color: var(--neon-purple);
+}
+
+.symptom-card.alert-card {
+  border-color: rgba(255, 51, 102, 0.4);
+}
+
+.symptom-card.alert-card:hover {
+  box-shadow: 0 10px 20px rgba(255, 51, 102, 0.15);
+  border-color: var(--danger);
+}
+
+.icon-wrapper {
+  color: var(--neon-purple);
+  background: rgba(157, 0, 255, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.alert-card .icon-wrapper {
+  color: var(--danger);
+  background: rgba(255, 51, 102, 0.1);
+}
+
+.symptom-card h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+}
+
+.symptom-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.check-btn {
+  background: transparent;
+  border: 1px solid var(--neon-purple);
+  color: var(--neon-purple);
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.check-btn:hover {
+  background: rgba(157, 0, 255, 0.1);
+  box-shadow: 0 0 10px rgba(157, 0, 255, 0.3);
+}
+
+.alert-card .check-btn {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.alert-card .check-btn:hover {
+  background: rgba(255, 51, 102, 0.1);
+  box-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

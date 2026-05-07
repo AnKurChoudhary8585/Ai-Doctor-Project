@@ -1,0 +1,69 @@
+.firstaid-container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.firstaid-container h2 {
+  font-size: 2.5rem;
+}
+
+.firstaid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.fa-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fa-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 4px; height: 100%;
+  background: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.fa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+  border-color: var(--neon-cyan);
+}
+
+.fa-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-wrapper.cyan {
+  color: var(--neon-cyan);
+  background: rgba(0, 255, 255, 0.1);
+  padding: 0.8rem;
+  border-radius: 12px;
+}
+
+.fa-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+}
+
+.fa-body p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}

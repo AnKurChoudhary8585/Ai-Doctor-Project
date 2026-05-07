@@ -1,0 +1,185 @@
+:root {
+  --bg-dark: #0A0A1A;
+  --bg-card: #14142B;
+  --neon-purple: #9D00FF;
+  --neon-cyan: #00FFFF;
+  --text-main: #FFFFFF;
+  --text-muted: #A0A0B0;
+  --danger: #FF3366;
+  --warning: #FFB020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.smooth-theme {
+  background-color: transparent !important;
+}
+
+body.smooth-theme {
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --neon-cyan: #38bdf8;
+  --neon-purple: #818cf8;
+}
+
+.garden-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+body.smooth-theme .garden-iframe {
+  opacity: 1;
+}
+
+body.smooth-theme .app-container {
+  background: transparent !important;
+  background-image: none !important;
+}
+body.smooth-theme .splash-screen {
+  background: transparent !important;
+  background-image: none !important;
+}
+body.smooth-theme .app-header,
+body.smooth-theme .app-header.compact {
+  background: rgba(30, 41, 59, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+body.smooth-theme .settings-dropdown,
+body.smooth-theme .modal-content,
+body.smooth-theme .google-chooser-modal,
+body.smooth-theme .app-footer,
+body.smooth-theme .history-card {
+  background: #1e293b;
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #f8fafc;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+body.smooth-theme .settings-item {
+  color: #f8fafc;
+}
+body.smooth-theme .settings-item:hover {
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+body.smooth-theme .nav-btn.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+body.smooth-theme .message-bubble.bot {
+  background: rgba(56, 189, 248, 0.1);
+  color: #f8fafc;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+body.smooth-theme .message-bubble.user {
+  background: linear-gradient(135deg, #818cf8, #38bdf8);
+  color: #fff;
+  border: none;
+}
+body.smooth-theme .card-icon {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+body.smooth-theme .back-btn {
+  color: #f8fafc;
+  border-color: rgba(148, 163, 184, 0.4);
+}
+body.smooth-theme .back-btn:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+/* Enhancing contrast for the Garden Animation Background */
+body.smooth-theme .primary-card,
+body.smooth-theme .grid-card,
+body.smooth-theme .hospital-card-full,
+body.smooth-theme .dash-section .grid-card.cyan-grad,
+body.smooth-theme .dash-section .grid-card.purple-grad,
+body.smooth-theme .dash-section .grid-card.mixed-grad,
+body.smooth-theme .dash-section .primary-card {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(8px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.smooth-theme .primary-card:hover,
+body.smooth-theme .grid-card:hover {
+  background: rgba(30, 41, 59, 0.95) !important;
+  border-color: #38bdf8 !important;
+}
+
+body.smooth-theme .primary-card h3,
+body.smooth-theme .grid-card h4,
+body.smooth-theme .section-title,
+body.smooth-theme .user-info h3,
+body.smooth-theme .user-info p,
+body.smooth-theme .hospitals-header h2,
+body.smooth-theme .history-desc {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0,0,0,0.5);
+}
+
+body.smooth-theme .primary-card p,
+body.smooth-theme .hospital-info-full p {
+  color: #cbd5e1 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+body.smooth-theme .grid-card svg {
+  color: #38bdf8 !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));
+}
+
+body.smooth-theme .app-header h2 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon-purple); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neon-cyan); 
+}
+
+.bg-gradient-text {
+  background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

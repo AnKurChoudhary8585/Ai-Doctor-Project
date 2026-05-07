@@ -1,0 +1,92 @@
+.onboarding-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  height: 100vh;
+  text-align: center;
+  background-image: radial-gradient(circle at top right, #1a0b2e 0%, var(--bg-dark) 80%);
+}
+.onboarding-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+.onboarding-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  color: var(--neon-cyan);
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.2), 0 0 30px rgba(0, 255, 255, 0.1);
+}
+.onboarding-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.onboarding-content p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.onboarding-dots {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 3rem;
+}
+.onboarding-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+.onboarding-dots .dot.active {
+  background: var(--neon-cyan);
+  width: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+.onboarding-controls {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.skip-btn, .next-btn {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+.skip-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.skip-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.next-btn {
+  background: linear-gradient(to right, var(--neon-cyan), #0088ff);
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+.next-btn:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  transform: scale(1.02);
+}
