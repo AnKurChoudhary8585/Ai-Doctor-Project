@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <iframe className="garden-iframe" src="/@fs/C:/Users/Ankur/OneDrive/Desktop/Designs/Designs/blooming_night_garden_animation/index.html" title="Garden Background"></iframe>
+      <iframe className="garden-iframe" src="/blooming_night_garden_animation/index.html" title="Garden Background"></iframe>
       <div className="app-container">
       {currentPage !== 'dashboard' && (
         <header className="app-header compact">

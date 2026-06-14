@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Clock, AlertTriangle } from 'lucide-react';
 import './HealthHistory.css';
+import { API_BASE_URL } from '../config';
 
 const HealthHistory = ({ user }) => {
   const [history, setHistory] = useState([]);
@@ -20,7 +21,7 @@ const HealthHistory = ({ user }) => {
          return;
       }
 
-      fetch(`http://localhost:5000/api/history/${user._id}`)
+      fetch(`${API_BASE_URL}/api/history/${user._id}`)
         .then(res => {
            if (!res.ok) throw new Error("Backend offline");
            return res.json();

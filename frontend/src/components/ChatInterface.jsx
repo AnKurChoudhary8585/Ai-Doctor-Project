@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, AlertTriangle } from 'lucide-react';
 import './ChatInterface.css';
+import { API_BASE_URL } from '../config';
 
 const ChatInterface = ({ initialChatMsg, setInitialChatMsg, user }) => {
   const [messages, setMessages] = useState([{
@@ -60,7 +61,7 @@ const ChatInterface = ({ initialChatMsg, setInitialChatMsg, user }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/chat', {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input, userId: user?._id })

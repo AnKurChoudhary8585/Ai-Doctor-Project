@@ -1,0 +1,16 @@
+[build]
+  command = "npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend"
+  publish = "frontend/dist"
+  functions = "netlify/functions"
+
+# Route API endpoints to the Express serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server/api/:splat"
+  status = 200
+
+# Route all other requests to the SPA frontend index.html for client-side routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

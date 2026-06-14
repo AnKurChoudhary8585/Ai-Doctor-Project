@@ -1,22 +1,27 @@
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Node modules
+# Dependencies
 node_modules/
+**/node_modules/
 
-# Logs
+# Secrets & local env files (strictly ignore any env files in subdirectories)
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Local databases & logs
+data/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build directories
+# Builds & Netlify local configs
+.netlify/
 dist/
+**/dist/
 build/
+**/build/
 
-# OS generated files
+# OS files
 .DS_Store
 Thumbs.db
